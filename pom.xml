@@ -2,36 +2,131 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>lambda.expression</groupId>
-  <artifactId>tutorial</artifactId>
+  <!-- Core information -->
+  <groupId>io.github.sachithariyathilaka</groupId>
+  <artifactId>lambda-expression-tutorial</artifactId>
   <version>1.0.0</version>
+
+  <!-- Packaging information -->
   <packaging>jar</packaging>
 
-  <name>tutorial</name>
-  <url>http://maven.apache.org</url>
+  <!-- Project information -->
+  <name>Lambda Expression Tutorial</name>
+  <description>Tutorial project based on maven for java lambda expressions</description>
+  <url>https://github.com/sachithariyathilaka/lambda-expression-tutorial</url>
+  <inceptionYear>2024</inceptionYear>
 
+  <!-- License information -->
+  <licenses>
+    <license>
+      <name>MIT Licence</name>
+    </license>
+  </licenses>
+
+  <!-- Organization information -->
+  <organization>
+    <name>ByteGen Technologies</name>
+    <url>https://github.com/sachithariyathilaka</url>
+  </organization>
+
+  <!-- Developer information -->
+  <developers>
+    <developer>
+      <id>1</id>
+      <name>Sachith Ariyathilaka</name>
+      <organization>ByteGen Technologies</organization>
+      <organizationUrl>https://github.com/sachithariyathilaka</organizationUrl>
+      <email>sachith.vidu@yahoo.com</email>
+      <roles>
+        <role>Chairman</role>
+      </roles>
+      <timezone>UTC +5:30</timezone>
+    </developer>
+  </developers>
+
+  <!-- Property information -->
   <properties>
+
+    <!-- Project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>8</java.version>
+
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+  <!-- Profile information -->
+  <profiles>
+    <profile>
+      <id>tutorial</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+  </profiles>
+
+  <!-- Repository information -->
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <!-- Plugin repository information -->
+  <pluginRepositories>
+
+    <pluginRepository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+    </pluginRepository>
+
+  </pluginRepositories>
+
+  <!-- Build information -->
   <build>
+
+    <!-- General information -->
+    <directory>${project.basedir}/target</directory>
+    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+    <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+
+    <!-- Plugin information -->
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>8</source>
-          <target>8</target>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
         </configuration>
       </plugin>
     </plugins>
+
   </build>
+
+  <!-- SCM information -->
+  <scm>
+    <url>https://github.com/sachithariyathilaka/lambda-expression-tutorial</url>
+    <connection>scm:git:https://github.com/sachithariyathilaka/lambda-expression-tutorial.git</connection>
+    <developerConnection>scm:git:git@github.com:sachithariyathilaka/lambda-expression-tutorial.git</developerConnection>
+  </scm>
+
+  <!-- Reporting information -->
+  <reporting>
+    <outputDirectory>${project.build.directory}/site</outputDirectory>
+  </reporting>
+
 </project>
