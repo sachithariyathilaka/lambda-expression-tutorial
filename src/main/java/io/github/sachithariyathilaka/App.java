@@ -23,12 +23,10 @@ public class App {
 
         // Optional type declaration
         app.optionalTypeDeclaration(brands);
-        System.out.println();
 
         // Optional parenthesis around parameters
         app.optionalParenthesisAroundParameters(brands);
-        System.out.println();
-
+    
         // Optional return keyword
         app.optionalReturnKeyword(brands);
 
@@ -65,6 +63,8 @@ public class App {
             else
                 System.out.print(StringUtils.capitalize(brand));
         });
+
+         System.out.println();
     }
 
     /**
@@ -93,6 +93,8 @@ public class App {
             else
                 System.out.print(StringUtils.capitalize(brand));
         });
+
+        System.out.println();
     }
 
     /**
