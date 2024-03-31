@@ -14,27 +14,27 @@ import java.util.function.IntBinaryOperator;
  * @version 1.0.0
  * @since   2024/03/24
  */
-public class App {
+public class LambdaExpressionTutorial {
 
     public static void main( String[] args ) {
 
         List<String> brands = Arrays.asList("honda", "audi", "toyota");
-        App app = new App();
+        LambdaExpressionTutorial lambdaExpressionTutorial = new LambdaExpressionTutorial();
 
         // Optional type declaration
-        app.optionalTypeDeclaration(brands);
+        lambdaExpressionTutorial.optionalTypeDeclaration(brands);
 
         // Optional parenthesis around parameters
-        app.optionalParenthesisAroundParameters(brands);
+        lambdaExpressionTutorial.optionalParenthesisAroundParameters(brands);
     
         // Optional return keyword
-        app.optionalReturnKeyword(brands);
+        lambdaExpressionTutorial.optionalReturnKeyword(brands);
 
         // Optional curly braces
-        app.optionalCurlyBraces(brands);
+        lambdaExpressionTutorial.optionalCurlyBraces(brands);
 
         // Empty parameters
-        app.emptyParameters();
+        lambdaExpressionTutorial.emptyParameters();
     }
 
     /**
